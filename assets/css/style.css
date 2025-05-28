@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Manrope", sans-serif;
+}
+
+body{
+	background: #000;
+	color: white;
+}
+
+.btn-custom{
+	background-color: #c8f400;
+	color: black;
+	font-size: 20px;
+	border-radius: 40px;
+	padding: 10px 40px;
+	font-weight: 600;
+	transition: .5s;
+}
+.btn-custom:hover{
+	color: #1a1a1a;
+}
+
+.text-secondary{
+	color: #999999 !important;
+}
+
+.navbar-custom {
+  background-color: #1a1a1a;
+}
+.navbar-nav .nav-link {
+  color: white !important;
+}
+.navbar-nav .nav-link:hover {
+  color: #ccc !important;
+}
+.navbar-nav .nav-link.active{
+	font-weight: bold;
+}
+.btn-login {
+  background-color: #0f0f0f;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 20px;
+}
+.btn-register {
+  background-color: #c8f400;
+  color: black;
+  border-radius: 20px;
+  padding: 5px 20px;
+  font-weight: 600;
+}
+.search-btn {
+  background-color: #0f0f0f;
+  border-radius: 50%;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .5s;
+}
+.search-btn i {
+  color: white;
+  font-size: 20px;
+}
+
+.btn-login:hover,
+.search-btn:hover {
+	color: #ccc;
+}
+
+/*-- nav end --*/
+
+.hero{
+	background: url('../img/hero-bg.png') no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 40px 0;
+	text-align: center;
+}
+.hero img{
+	width: 450px;
+	margin: 130px 0;
+}
+
+.logos .owl-carousel .item img{
+	width: 120px !important;
+}
+
+.poster .owl-carousel .item img{
+	width: 268px !important;
+}
+
+.poster .match-carousel .item img{
+	width: 320px !important;
+}
+
+.plan-box {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 2px solid transparent;
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  transition: border 0.3s;
+}
+
+.plan-box.active {
+  border: 2px solid #d3ff00;
+}
+
+.check-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #d3ff00;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.check-icon.hidden {
+  opacity: 0;
+}
+
+.choose-btn {
+  background-color: #d3ff00;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  margin-top: 2rem;
+  transition: background 0.3s;
+}
+
+.choose-btn:hover {
+  background-color: #c2ea00;
+}
+
+.plan-price {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+
+
+
+/*for medium device*/
+@media only screen and (max-width: 813px){
+	.hero img{
+		width: 400px;
+		margin: 80px 0;
+	}
+	.bg-black{
+		--bs-bg-opacity: 0;
+	}
+}
+
+
+/*for mobile device*/
+@media only screen and (max-width: 413px){
+	.hero img{
+		width: 250px;
+		margin: 30px 0;
+	}
+	.hero p{
+		width: 90% !important;
+		text-align: justify;
+	}
+}
