@@ -193,13 +193,31 @@ body{
   color: #999999;
   font-size: 18px;
 }
+.btn-primary{
+  background: var(--primary) !important;
+  border: none;
+  color: #000;
+}
+.btn-primary:hover{
+  background: #c2ea00 !important;
+  color: #000;
+}
+.btn-dark{
+  background: #0F0F0F !important;
+}
+
 
 .movie-details .bg-banar{
-    min-height: 85vh;
+    height: 85vh;
     background: url('../img/movies-details.png') no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
+}
+.movie-details .bg-banar .bg-layer{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .movie-details .details-title{
@@ -208,6 +226,11 @@ body{
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
+}
+.movie-details .video-title{
+  font-family: var(--font-roboto);
+  font-weight: 700;
+  font-size: 32px;
 }
 
 
