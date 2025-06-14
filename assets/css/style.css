@@ -240,6 +240,15 @@ body{
   background: var(--primary) !important;
 }
 
+.cast-carousel .owl-dots{
+  display: none;
+}
+.cast-carousel .owl-nav {
+    position: absolute;
+    top: -38%;
+    right: 10px;
+  }
+
 
 
 
@@ -255,6 +264,36 @@ body{
   .navbar-custom .navbar-nav{
     background: transparent !important;
   }
+  .movie-details .bg-banar{
+    height: 45vh;
+  }
+  .cast-carousel .owl-nav {
+    position: absolute;
+    top: -74%;
+    right: 0px;
+  }
+  .info-card .section-label{
+    font-size: 16px;
+  }
+  .btn-info-tag{
+    font-size: 12px;
+  }
+  #details-rating .rat-box{
+    flex-direction: column;
+  }
+  #details-rating .rat-box .w-50{
+    width: 100% !important;
+  }
+  .movie-details .img-pro img{
+    width: 40px;
+    height: 40px;
+  }
+  .movie-details .img-text p{
+    font-size: 12px !important;
+  }
+  .movie-details .img-text p small{
+    font-size: 10px !important;
+  }
 }
 
 
@@ -268,4 +307,24 @@ body{
 		width: 90% !important;
 		text-align: justify;
 	}
+  .movie-details .bg-banar{
+    height: 50vh;
+  }
+  .movie-details .details-title{
+    width: 100%;
+  }
+  .movie-details .video-title{
+    font-size: 24px;
+  }
+  .info-card .info-title{
+    font-size: 16px;
+  }
+  .movie-details .info-card p{
+    font-size: 13px;
+  }
+  .cast-carousel .owl-nav{
+    position: absolute;
+    top: -60%;
+    right: -8px;
+  }
 }

@@ -56,6 +56,29 @@ $('.match-carousel').owlCarousel({
   }
 });
 
+$('.cast-carousel').owlCarousel({
+    loop: true,
+    margin: 12,
+    nav: true,
+    dots: true,
+    navText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+    responsive: {
+      0: {
+        items: 3
+      },
+      576: {
+        items: 4
+      },
+      768: {
+        items: 5
+      },
+      992: {
+        items: 6
+      }
+    }
+  });
+
+
 function selectPlan(plan) {
   const monthlyBox = document.getElementById('monthlyPlan');
   const yearlyBox = document.getElementById('yearlyPlan');
