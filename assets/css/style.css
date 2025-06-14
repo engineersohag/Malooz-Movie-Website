@@ -232,7 +232,13 @@ body{
   font-weight: 700;
   font-size: 32px;
 }
-
+.movie-details .info-card p{
+  font-size: 18px;
+  font-weight: 500;
+}
+.movie-details .owl-theme .owl-dots .owl-dot.active span{
+  background: var(--primary) !important;
+}
 
 
 
