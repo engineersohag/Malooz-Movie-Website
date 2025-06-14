@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --font-roboto: "Roboto", sans-serif;
+  --primary: #B8EB00;
+}
 
 *{
 	margin: 0;
@@ -13,12 +18,13 @@ body{
 }
 
 .btn-custom{
-	background-color: #c8f400;
+	background-color: var(--primary);
 	color: black;
+  font-family: var(--font-roboto) !important;
+  font-weight: 700;
 	font-size: 20px;
 	border-radius: 40px;
 	padding: 10px 40px;
-	font-weight: 600;
 	transition: .5s;
 }
 .btn-custom:hover{
@@ -30,10 +36,11 @@ body{
 }
 
 .navbar-custom {
-  background-color: #1a1a1a;
+  background-color: #262626;
 }
 .navbar-nav .nav-link {
   color: white !important;
+  font-family: var(--font-roboto) !important;
 }
 .navbar-nav .nav-link:hover {
   color: #ccc !important;
@@ -42,17 +49,22 @@ body{
 	font-weight: bold;
 }
 .btn-login {
-  background-color: #0f0f0f;
+  background-color: #1A1A1A;
   color: white;
+  font-family: var(--font-roboto) !important;
   border-radius: 20px;
   padding: 5px 20px;
 }
 .btn-register {
-  background-color: #c8f400;
+  background-color: var(--primary);
   color: black;
+  font-family: var(--font-roboto) !important;
   border-radius: 20px;
   padding: 5px 20px;
   font-weight: 600;
+}
+.bg-black{
+  background: #0F0F0F !important;
 }
 .search-btn {
   background-color: #0f0f0f;
@@ -88,6 +100,12 @@ body{
 	margin: 130px 0;
 }
 
+.logos h5,
+.poster h5{
+  font-family: var(--font-roboto);
+  font-weight: 500;
+}
+
 .logos .owl-carousel .item img{
 	width: 120px !important;
 }
@@ -100,26 +118,31 @@ body{
 	width: 320px !important;
 }
 
-.plan-box {
+.plan-container .plan-box {
   background-color: #1c1c1c;
   border-radius: 12px;
   padding: 2rem;
+  text-align: justify;
   border: 2px solid transparent;
   position: relative;
   cursor: pointer;
   height: 100%;
   transition: border 0.3s;
 }
+.plan-container .plan-box h4{
+  font-size: 24px;
+  font-weight: 700;
+}
 
-.plan-box.active {
-  border: 2px solid #d3ff00;
+.plan-container .plan-box.active {
+  border: 2px solid var(--primary);
 }
 
 .check-icon {
   position: absolute;
   top: 15px;
   right: 15px;
-  background-color: #d3ff00;
+  background-color: var(--primary);
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -136,12 +159,13 @@ body{
 }
 
 .choose-btn {
-  background-color: #d3ff00;
+  background-color: var(--primary);
   border: none;
   color: #000;
-  font-weight: bold;
-  padding: 0.8rem 2rem;
-  border-radius: 30px;
+  font-family: var(--font-roboto);
+  font-size: 20px;
+  padding: 18px 30px;
+  border-radius: 40px;
   margin-top: 2rem;
   transition: background 0.3s;
 }
@@ -150,20 +174,42 @@ body{
   background-color: #c2ea00;
 }
 
-.plan-price {
-  font-size: 1.8rem;
-  margin-top: 1rem;
+.plan-container .plan-box .plan-price {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 28px;
+}
+.plan-container .plan-box .plan-price small{
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 38px;
+  font-weight: 700;
 }
 
 .subtitle {
-  color: #aaa;
-  font-size: 0.95rem;
+  color: #999999;
+  font-size: 18px;
 }
+
+.movie-details .bg-banar{
+    min-height: 85vh;
+    background: url('../img/movies-details.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.movie-details .details-title{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
 
 
 
@@ -177,6 +223,9 @@ body{
 	.bg-black{
 		--bs-bg-opacity: 0;
 	}
+  .navbar-custom .navbar-nav{
+    background: transparent !important;
+  }
 }
 
 

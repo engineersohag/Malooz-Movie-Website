@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Malooz</title>
+	<link rel="icon" href="assets/img/fav.png">
+
+	<!-- fontawesome CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+	<!-- -- Bootstrap 5 -- -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- -- Custom CSS -- -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<style>
+        .info-card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.6);
+        }
+        .info-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #999999;
+            margin-bottom: 8px;
+        }
+        .info-value {
+            font-weight: 600;
+            font-size: 20px;
+            color: #fff;
+        }
+        .btn-info-tag {
+            background-color: #121212;
+            color: #8A8A8A;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 4px 12px;
+            margin: 3px;
+            font-size: 14px;
+        }
+        .btn-info-tag.active {
+            color: #fff;
+        }
+        .btn-info-tag:hover{
+            color: #fff;
+        }
+        .section-label {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #999999;
+        }
+        .icon {
+            margin-right: 6px;
+        }
+        .info-search form button{
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            color: #3396FF !important;
+        }
+        .recent-post img {
+            width: 60px;
+            border-radius: 6px;
+            margin-right: 10px;
+        }
+        .recent-post-text {
+            font-size: 13px;
+            color: #ccc;
+        }
+        .review-card {
+            background: #121212;
+            border-radius: 12px;
+            padding: 20px;
+            color: #ccc;
+            height: 295px;
+        }
+        .review-card p {
+            font-size: 16px;
+            margin-top: 10px;
+            text-align: justify;
+        }
+        .rating {
+            background: #1e1e1e;
+            border-radius: 20px;
+            padding: 2px 8px;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .owl-nav button {
+            background: #1e1e1e !important;
+            color: #ccc !important;
+            border-radius: 50% !important;
+            padding: 6px 12px !important;
+            margin: 0 4px;
+        }
+        .owl-theme .owl-dots .owl-dot span{
+            width: 20px;
+            height: 4px;
+            margin: 10px 3px;
+            background: #333333;
+            margin-top: 20px;
+        }
+        .owl-theme .owl-dots .owl-dot.active span{
+            background: #3396FF;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-custom px-3 py-2">
+	  <div class="container-xl py-lg-2">
+	    <a class="navbar-brand d-flex align-items-center text-white" href="#">
+	      <img src="assets/img/logo.png" alt="" style="width: 140px;">
+	    </a>
+	    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+	      <i class="fa-solid fa-bars"></i>
+	    </button>
+
+	    <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+	      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 bg-black rounded-pill px-3 py-1">
+	        <li class="nav-item"><a class="nav-link px-3 active" href="#">Home</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">Movies & Series</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">Live</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">Events</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">Sports</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">New & Popular</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">Documentaries</a></li>
+	      </ul>
+	      <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+	        <div class="search-btn">
+	          <i class="fa-solid fa-magnifying-glass"></i>
+	        </div>
+	        <button class="btn btn-login">Login</button>
+	        <button class="btn btn-register">Register</button>
+	      </div>
+	    </div>
+	  </div>
+	</nav>
+
+	<!-- -- Nav End -- -->
+
+	<!-- -- main content -- -->
+    <main class="movies-page-1 movie-details">
+
+        <section class="bg-banar">
+            <div class="container">
+                <div class="details-title mb-3">
+                    <h2 class="fw-blod">The Ultimate</h2>
+                    <p>A fiery young man clashes with an unflinching forest officer in a south Indian village where spirituality, fate and folklore rule the lands.</p>
+                    <div class="play-btn">
+                        <a href="#" class="btn btn-primary me-3"><i class="bi bi-play-fill"></i> Play Now</a>
+                        <a href="#" class="btn btn-dark me-3"><i class="fa-solid fa-plus"></i></a>
+                        <a href="#" class="btn btn-dark"><i class="fa-solid fa-star"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 py-3">
+                    <div class="d-flex gap-5" id="del">
+                        <p><i class="bi bi-person"></i> Posted By Username</p>
+                        <p><i class="bi bi-calendar4-week"></i> May 02, 2025</p>
+                        <p><i class="bi bi-chat-square-text"></i> 26 Comments</p>
+                    </div>
+                    <h3 class="fw-blod col-md-10 my-3" style="color: #AAA9A9;">Lorem Ipsum is simply dummy text of the  typesetting dummy text</h3>
+                    <p class="mt-3 mb-5 text-secondary">A fiery young man clashes with an unflinching forest officer in a south Indian village where spirituality, fate and folklore rule the lands.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- -- content & review -- -->
+         <div class="container">
+            <div class="row">
+                <div class="col-md-8 mb-4">
+                    <div class="info-card">
+                        <div class="mb-4">
+                            <div class="info-title">Information</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="section-label">
+                                <i class="bi bi-calendar4-week icon"></i> Released Year
+                            </div>
+                            <div class="info-value">2025</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="section-label">
+                                <i class="bi bi-translate icon"></i> Available Languages
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-info-tag active">English</button>
+                                <button type="button" class="btn btn-info-tag">Hindi</button>
+                                <button type="button" class="btn btn-info-tag">Tamil</button>
+                                <button type="button" class="btn btn-info-tag">Telegu</button>
+                                <br>
+                                <button type="button" class="btn btn-info-tag">Kannada</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="section-label">
+                                <i class="bi bi-grid-3x3-gap icon"></i> Category
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-info-tag active">Action</button>
+                                <button type="button" class="btn btn-info-tag">Adventure</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Reviews Section -->
+                    <div class="info-card mt-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="info-title">Reviews</div>
+                            <button class="btn btn-info-tag text-white"><i class="bi bi-plus-lg"></i> Add Your Review</button>
+                        </div>
+                        <div class="owl-carousel owl-theme">
+                            <!-- Review 1 -->
+                            <div class="item">
+                                <div class="review-card">
+                                    <h5 class="fw-blod">Aniket Roy</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="lead">From UK</span>
+                                        <div class="rating mt-2">
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-half text-warning"></i>
+                                            <span>4.5</span>
+                                        </div>
+                                    </div>
+                                    <p class="mt-3">This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. to...</p>
+                                </div>
+                            </div>
+                            <!-- Review 2 -->
+                            <div class="item">
+                                <div class="review-card">
+                                    <h5 class="fw-blod">Sohag Hosen</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="lead">From BD</span>
+                                        <div class="rating mt-2">
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                    <p class="mt-3">This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. to...</p>
+                                </div>
+                            </div>
+                            <!-- Review 3 -->
+                            <div class="item">
+                                <div class="review-card">
+                                    <h5 class="fw-blod">Sibam Sharma</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="lead">From India</span>
+                                        <div class="rating mt-2">
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                    <p class="mt-3">This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. to...</p>
+                                </div>
+                            </div>
+                            <!-- Review 3 -->
+                            <div class="item">
+                                <div class="review-card">
+                                    <h5 class="fw-blod">Jhone Deo</h5>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="lead">From India</span>
+                                        <div class="rating mt-2">
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i> 
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                    <p class="mt-3">This movie was recommended to me by a very dear friend who went for the movie by herself. I went to the cinemas Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. to...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="info-card">
+                        <div class="mb-4">
+                            <div class="info-title text-white">Search</div>
+                        </div>
+
+                        <div class="mb-4 info-search">
+                            <form action="" class="position-relative">
+                                <input type="search" placeholder="Search" class="form-control border">
+                                <button class="btn text-primary"><i class="bi bi-search text-primary"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Recent Post -->
+                    <div class="info-card mt-5">
+                        <div class="info-title">Recent Post</div>
+
+                        <div class="recent-post d-flex align-items-center mt-3">
+                            <img src="assets/img/video/r1.png" alt="">
+                            <div class="recent-post-text ms-2">Lorem Ipsum is simply dummy text of the typesetting dummy text</div>
+                        </div>
+
+                        <div class="recent-post d-flex align-items-center mt-3">
+                            <img src="assets/img/video/r2.png" alt="">
+                            <div class="recent-post-text ms-2">Lorem Ipsum is simply dummy text of the typesetting dummy text</div>
+                        </div>
+
+                        <div class="recent-post d-flex align-items-center mt-3">
+                            <img src="assets/img/video/r3.png" alt="">
+                            <div class="recent-post-text ms-2">Lorem Ipsum is simply dummy text of the typesetting dummy text</div>
+                        </div>
+                        <div class="recent-post d-flex align-items-center mt-3">
+                            <img src="assets/img/video/r4.png" alt="">
+                            <div class="recent-post-text ms-2">Lorem Ipsum is simply dummy text of the typesetting dummy text</div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+         </div>
+
+    </main>
+
+
+
+	<!-- footer part start  -->
+	<footer class="bg-black text-white pt-5 pb-4">
+	  <div class="container">
+	    <div class="row gy-4">
+	      <!-- Home -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Home</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Categories</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Devices</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Pricing</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">FAQ</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Movies -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Movies</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Gernes</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Trending</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">New Release</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Popular</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Series -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Series</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Gernes</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Trending</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">New Release</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Popular</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Support -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Support</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Contact Us</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Subscription -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Subscription</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Plans</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Features</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Social -->
+	      <div class="col-12 col-md-2">
+	        <h6 class="fw-bold">Connect With Us</h6>
+	        <div class="d-flex gap-2">
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-facebook"></i>
+	          </a>
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-twitter"></i>
+	          </a>
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-linkedin"></i>
+	          </a>
+	        </div>
+	      </div>
+	    </div>
+
+	    <hr class="border-secondary mt-4">
+
+	    <div class="row text-muted small pt-2">
+	      <div class="col-md-6 text-center text-md-start">
+	        &copy;2025 Malooz, All Rights Reserved
+	      </div>
+	      <div class="col-md-6 text-center text-md-end">
+	        <a href="#" class="text-decoration-none text-muted me-3">Terms of Use</a>
+	        <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+	        <a href="#" class="text-decoration-none text-muted">Cookie Policy</a>
+	      </div>
+	    </div>
+	  </div>
+	</footer>
+
+
+	<!-- JS Scripts -->
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
