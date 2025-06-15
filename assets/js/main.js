@@ -79,7 +79,7 @@ $('.cast-carousel').owlCarousel({
   });
 
   
-  // Owl Carousel 03
+  // Movies Serice
   $(".movies-serice-cal").owlCarousel({
     loop: true,
     margin: 20,
@@ -92,6 +92,23 @@ $('.cast-carousel').owlCarousel({
       576: { items: 2 },
       768: { items: 5 },
       992: { items: 7 }
+    }
+  });
+
+  
+  // New & Popular 
+  $(".new-popular-cal").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: false,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: { items: 2 },
+      576: { items: 2 },
+      768: { items: 3 },
+      992: { items: 5 }
     }
   });
 

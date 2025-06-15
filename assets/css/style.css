@@ -500,6 +500,23 @@ input[type="range"].progress::-webkit-slider-thumb {
   border-radius: 30px;
   font-size: 12px;
 }
+.movice-serics .hero-section{
+  width: 100%;
+  height: 600px;
+  background: url('../img/movie-serices.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.movice-serics .hero-section .wrap a{
+  padding: 13px 30px;
+}
+.new-popular .hero-section{
+  background: url('../img/new-popular.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 
 /*for medium device*/
@@ -581,6 +598,9 @@ input[type="range"].progress::-webkit-slider-thumb {
   #vid_play_page .video-title{
       font-size: 20px;
   }
+  .movice-serics .hero-section{
+    height: 400px;
+  }
 }
 
 
@@ -613,5 +633,10 @@ input[type="range"].progress::-webkit-slider-thumb {
     position: absolute;
     top: -60%;
     right: -8px;
+  }
+  .movice-serics .hero-section{
+    height: 600px;
+    align-items: end;
+    padding-bottom: 50px;
   }
 }
