@@ -460,7 +460,46 @@ input[type="range"].progress::-webkit-slider-thumb {
     padding: 5px 15px;
     border-radius: 30px;
 }
-
+.related-video img {
+    border-radius: 6px;
+}
+#vid_play_page .btn-custom {
+    background: #353536;
+    color: #fff;
+    border: none;
+    padding: 6px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+#vid_play_page .btn-custom:hover {
+    background: #444;
+    color: #fff;
+}
+#vid_play_page .video-title{
+    font-size: 30px;
+}
+.section-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.section-header h4{
+    font-size: 20px;
+}
+.section-header a{
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+.movie-card .movie-rating{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #BFB0A2;
+  padding: 2px 8px;
+  border-radius: 30px;
+  font-size: 12px;
+}
 
 
 /*for medium device*/

@@ -78,6 +78,24 @@ $('.cast-carousel').owlCarousel({
     }
   });
 
+  
+  // Owl Carousel 03
+  $(".movies-serice-cal").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: false,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: { items: 2 },
+      576: { items: 2 },
+      768: { items: 5 },
+      992: { items: 7 }
+    }
+  });
+
+
 
 function selectPlan(plan) {
   const monthlyBox = document.getElementById('monthlyPlan');
