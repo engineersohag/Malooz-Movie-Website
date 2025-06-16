@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Malooz</title>
+	<link rel="icon" href="assets/img/fav.png">
+
+	<!-- fontawesome CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+	<!-- -- Bootstrap 5 -- -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- -- Custom CSS -- -->
+	<link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .movie-card img{
+            width: 240px;
+            height: 183px;
+        }
+        .icon-bg{
+            background: rgba(162, 149, 129, 0.5);
+            backdrop-filter: blur(21px);    
+            -webkit-backdrop-filter: blur(21px); 
+            border-radius: 30px;
+            padding: 2px 10px !important;
+            margin: 5px;
+            font-size: 12px;
+        }
+        .live-icon-bg{
+            background: red;
+            border-radius: 30px;
+            padding: 1px 10px !important;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom px-3 py-2">
+	  <div class="container-xl py-lg-2">
+	    <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
+	      <img src="assets/img/logo.png" alt="" style="width: 140px;">
+	    </a>
+	    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+	      <i class="fa-solid fa-bars"></i>
+	    </button>
+
+	    <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+	      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 bg-black rounded-pill px-3 py-1">
+	        <li class="nav-item"><a class="nav-link px-3 active" href="index.html">Home</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">Movies & Series</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">Live</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">Events</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">Sports</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">New & Popular</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="#">Documentaries</a></li>
+	      </ul>
+	      <!-- Right Side -->
+            <div class="d-flex align-items-center justify-content-center flex-lg-row flex-column">
+                <div class="search-btn me-2">
+                    <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <input type="searcch" placeholder="search" class="form-control d-lg-none">
+                </div>
+                <div class="profile-btn mt-3 mt-lg-0">
+                    <img src="assets/img/profile/top-user.png" alt="">
+                    <h6 class="mt-1">Jimmy</h6>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" id="dropdownFilter" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis-vertical text-white fs-5"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter">
+
+                            <!-- Item 1 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="profile.html">Account</a>
+                            </li>
+
+                            <!-- Item 2 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="javascript:void(0)">Settings</a>
+                                <ul class="dropdown-menu">
+                                    <h5 class="text-white px-4 py-2">Settings</h5>
+
+                                    <li>
+                                        <a class="dropdown-item" href="profile.html">
+                                            <i class="bi bi-person-circle me-2"></i> <span>Account Details</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="subscription.html">
+                                            <i class="bi bi-person-vcard-fill me-2"></i><span>Subscription</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="payment-billing.html">
+                                            <i class="bi bi-credit-card-fill me-2"></i><span>Payment</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="device.html">
+                                            <i class="bi bi-pc-display me-2"></i><span>Devices</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bi bi-keyboard-fill me-2"></i><span>Change PIN</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="prefarance.html">
+                                            <i class="bi bi-gear me-2"></i><span>Preferences</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bi bi-box-arrow-right me-2 text-danger"></i><span>Logout</span>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+
+                            <!-- Item 3 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="contact.html">Contact Us</a>
+                            </li>
+
+                            <!-- Item 4 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Favorites</a>
+                            </li>
+
+                            <!-- Item 5 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+	    </div>
+	  </div>
+	</nav>
+	<!-- -- Nav End -- -->
+
+    <!-- -- main content -- -->
+    <main class="movice-serics sports" id="vid_play_page">
+
+        <!-- -- video play part -- -->
+        <div class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="wrap">
+                            <h2 class="fw-bold mb-lg-4">STREAM THE REST OF THE SEASON. <br> NOW AT A LOWER PRICE.</h2>
+                            <p>Sign up now to stream live, condensed and on-demand games, <br> commercial-free on up to three devices for the rest of the season. <br> Plus, get access to download for later and in-arena entertainment.</p>
+                            <a href="#" class="btn mt-3 btn-primary ms-lg-5"><i class="fa-solid fa-play me-1"></i> Play Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -- video play part end --  -->
+
+        <div class="container py-lg-5 py-3">
+            <div class="section-header">
+                <h4>Live football</h4>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="owl-carousel owl-theme new-popular-cal">
+
+                <!-- Movie Item 1 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/1.png" alt="RAM">
+                    </a>
+                    <span class="position-absolute top-0 start-0 icon-bg px-2 py-1 small text-white">
+                        <i class="fa fa-eye"></i> 420
+                    </span>
+                    <span class="position-absolute top-0 end-0 live-icon-bg px-2 py-1 small text-white">LIVE</span>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/2.png" alt="Kanguva 1">
+                    </a>
+                    <span class="position-absolute top-0 start-0 icon-bg px-2 py-1 small text-white">
+                        <i class="fa fa-eye"></i> 420
+                    </span>
+                    <span class="position-absolute top-0 end-0 live-icon-bg px-2 py-1 small text-white">LIVE</span>
+                </div>
+
+                <!-- Movie Item 3 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/3.png" alt="Kanguva 2">
+                    </a>
+                    <span class="position-absolute top-0 start-0 icon-bg px-2 py-1 small text-white">
+                        <i class="fa fa-eye"></i> 420
+                    </span>
+                    <span class="position-absolute top-0 end-0 live-icon-bg px-2 py-1 small text-white">LIVE</span>
+                </div>
+
+                <!-- Movie Item 4 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/4.png" alt="Kanguva 3">
+                    </a>
+                    <span class="position-absolute top-0 start-0 icon-bg px-2 py-1 small text-white">
+                        <i class="fa fa-eye"></i> 420
+                    </span>
+                    <span class="position-absolute top-0 end-0 live-icon-bg px-2 py-1 small text-white">LIVE</span>
+                </div>
+
+                <!-- Movie Item 5 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/5.png" alt="Veeramallu">
+                    </a>
+                    <span class="position-absolute top-0 start-0 icon-bg px-2 py-1 small text-white">
+                        <i class="fa fa-eye"></i> 420
+                    </span>
+                    <span class="position-absolute top-0 end-0 live-icon-bg px-2 py-1 small text-white">LIVE</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container" style="margin-bottom: 40px;">
+            <div class="section-header">
+                <h4>Handball</h4>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="owl-carousel owl-theme new-popular-cal">
+
+                <!-- Movie Item 1 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/6.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/7.png" alt="Kanguva 1">
+                    </a>
+                </div>
+
+                <!-- Movie Item 3 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/8.png" alt="Kanguva 2">
+                    </a>
+                </div>
+
+                <!-- Movie Item 4 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/9.png" alt="Kanguva 3">
+                    </a>
+                </div>
+
+                <!-- Movie Item 5 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/10.png" alt="Veeramallu">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container" style="margin-bottom: 40px;">
+            <div class="section-header">
+                <h4>Basketball</h4>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="owl-carousel owl-theme new-popular-cal">
+
+                <!-- Movie Item 1 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/11.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/12.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 3 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/13.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 4 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/14.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 5 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/15.png" alt="RAM">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container" style="margin-bottom: 40px;">
+            <div class="section-header">
+                <h4>Highlights Match</h4>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="owl-carousel owl-theme new-popular-cal">
+
+                <!-- Movie Item 1 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/16.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/17.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 3 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/18.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 4 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/19.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 5 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/20.png" alt="RAM">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container" style="margin-bottom: 40px;">
+            <div class="section-header">
+                <h4>Replay Match</h4>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="owl-carousel owl-theme new-popular-cal">
+
+                <!-- Movie Item 1 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/21.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 2 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/22.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 3 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/23.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 4 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/24.png" alt="RAM">
+                    </a>
+                </div>
+
+                <!-- Movie Item 5 -->
+                <div class="movie-card">
+                    <a href="">
+                        <img src="assets/img/sports/25.png" alt="RAM">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    
+    
+	<!-- footer part start  -->
+	<footer class="bg-black text-white pt-5 pb-4">
+	  <div class="container">
+	    <div class="row gy-4">
+	      <!-- Home -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Home</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Categories</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Devices</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Pricing</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">FAQ</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Movies -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Movies</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Gernes</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Trending</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">New Release</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Popular</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Series -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Series</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Gernes</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Trending</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">New Release</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Popular</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Support -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Support</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Contact Us</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Subscription -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Subscription</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Plans</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Features</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Social -->
+	      <div class="col-12 col-md-2">
+	        <h6 class="fw-bold">Connect With Us</h6>
+	        <div class="d-flex gap-2">
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-facebook"></i>
+	          </a>
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-twitter"></i>
+	          </a>
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-linkedin"></i>
+	          </a>
+	        </div>
+	      </div>
+	    </div>
+
+	    <hr class="border-secondary mt-4">
+
+	    <div class="row text-muted small pt-2">
+	      <div class="col-md-6 text-center text-md-start">
+	        &copy;2025 Malooz, All Rights Reserved
+	      </div>
+	      <div class="col-md-6 text-center text-md-end">
+	        <a href="#" class="text-decoration-none text-muted me-3">Terms of Use</a>
+	        <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+	        <a href="#" class="text-decoration-none text-muted">Cookie Policy</a>
+	      </div>
+	    </div>
+	  </div>
+	</footer>
+
+
+
+    <!-- JS Scripts -->
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
