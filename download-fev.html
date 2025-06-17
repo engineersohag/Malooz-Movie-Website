@@ -81,14 +81,25 @@
       color: #000;
     }
     @media (max-width: 768px) {
-      .download-item {
-        flex-direction: column;
-        align-items: flex-start;
+      .video-details h6,
+      .video-details p{
+        font-size: 10px;
+        margin-top: 0;
       }
       .thumb {
         width: 100%;
         height: auto;
         margin-bottom: 10px;
+      }
+      .download-btn{
+        border: none;
+        font-size: 17px;
+        color: #c2ea00;
+      }
+      #favorite button,
+      #favorite button i{
+        font-size: 17px;
+        padding-right: 3px;
       }
     }
     </style>
@@ -226,7 +237,8 @@
                             <img src="assets/img/video/download.png" class="thumb" alt="Video Thumbnail">
                             <div class="video-details">
                                 <h6>The Video Title is here its a dummy text i used. This title automatically catch from video</h6>
-                                <p><span class="fw-bold">2.1 GB File</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline watch</p>
+                                <p class="d-md-none"><span class="fw-bold">2.1 GB File</span></p>
+                                <p class="d-none d-md-block"><span class="fw-bold">2.1 GB File</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline watch</p>
                             </div>
                         </div>
                         <button class="download-btn" onclick="startDownload(this)">
@@ -242,7 +254,8 @@
                             <img src="assets/img/video/download.png" class="thumb" alt="Video Thumbnail">
                             <div class="video-details">
                                 <h6>The Video Title is here its a dummy text i used. This title automatically catch from video</h6>
-                                <p><span class="fw-bold">2.1 GB File</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline watch</p>
+                                <p class="d-md-none"><span class="fw-bold">2.1 GB File</span></p>
+                                <p class="d-none d-md-block"><span class="fw-bold">2.1 GB File</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline watch</p>
                             </div>
                         </div>
                         <button class="download-btn" onclick="startDownload(this)">
@@ -250,13 +263,14 @@
                         </button>
                     </div>
 
-                    <!-- Item 2 -->
+                    <!-- Item 3 -->
                     <div class="download-item">
                         <div class="download-left">
                             <img src="assets/img/video/download.png" class="thumb" alt="Video Thumbnail">
                             <div class="video-details">
                                 <h6>The Video Title is here its a dummy text i used. This title automatically catch from video</h6>
-                                <p><span class="fw-bold">2.1 GB File</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline watch</p>
+                                <p class="d-md-none"><span class="fw-bold">2.1 GB File</span></p>
+                                <p class="d-none d-md-block"><span class="fw-bold">2.1 GB File</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline watch</p>
                             </div>
                         </div>
                         <button class="download-btn" onclick="startDownload(this)">
@@ -264,13 +278,14 @@
                         </button>
                     </div>
 
-                    <!-- Item 2 -->
+                    <!-- Item 4 -->
                     <div class="download-item">
                         <div class="download-left">
                             <img src="assets/img/video/download.png" class="thumb" alt="Video Thumbnail">
                             <div class="video-details">
                                 <h6>The Video Title is here its a dummy text i used. This title automatically catch from video</h6>
-                                <p><span class="fw-bold">2.1 GB File</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline watch</p>
+                                <p class="d-md-none"><span class="fw-bold">2.1 GB File</span></p>
+                                <p class="d-none d-md-block"><span class="fw-bold">2.1 GB File</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline watch</p>
                             </div>
                         </div>
                         <button class="download-btn" onclick="startDownload(this)">
@@ -278,13 +293,14 @@
                         </button>
                     </div>
 
-                    <!-- Item 2 -->
+                    <!-- Item 5 -->
                     <div class="download-item">
                         <div class="download-left">
                             <img src="assets/img/video/download.png" class="thumb" alt="Video Thumbnail">
                             <div class="video-details">
                                 <h6>The Video Title is here its a dummy text i used. This title automatically catch from video</h6>
-                                <p><span class="fw-bold">2.1 GB File</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline watch</p>
+                                <p class="d-md-none"><span class="fw-bold">2.1 GB File</span></p>
+                                <p class="d-none d-md-block"><span class="fw-bold">2.1 GB File</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline watch</p>
                             </div>
                         </div>
                         <button class="download-btn" onclick="startDownload(this)">
@@ -301,7 +317,8 @@
                             <img src="assets/img/video/fev.png" class="thumb" alt="Video Thumbnail">
                             <div class="video-details">
                                 <h6>The Video Title is here its a dummy text i used. This title automatically catch from video</h6>
-                                <p><span class="fw-bold">24k View</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline Favorite</p>
+                                <p class="d-md-none"><span class="fw-bold">24k View</span></p>
+                                <p class="d-none d-md-block"><span class="fw-bold">24k View</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline Favorite</p>
                             </div>
                         </div>
                         <button class="bg-transparent border-0 text-warning fs-1">
@@ -315,7 +332,8 @@
                             <img src="assets/img/video/fev.png" class="thumb" alt="Video Thumbnail">
                             <div class="video-details">
                                 <h6>The Video Title is here its a dummy text i used. This title automatically catch from video</h6>
-                                <p><span class="fw-bold">24k View</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline Favorite</p>
+                                <p class="d-md-none"><span class="fw-bold">24k View</span></p>
+                                <p class="d-none d-md-block"><span class="fw-bold">24k View</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline Favorite</p>
                             </div>
                         </div>
                         <button class="bg-transparent border-0 text-warning fs-1">
@@ -329,7 +347,8 @@
                             <img src="assets/img/video/fev.png" class="thumb" alt="Video Thumbnail">
                             <div class="video-details">
                                 <h6>The Video Title is here its a dummy text i used. This title automatically catch from video</h6>
-                                <p><span class="fw-bold">24k View</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline Favorite</p>
+                                <p class="d-md-none"><span class="fw-bold">24k View</span></p>
+                                <p class="d-none d-md-block"><span class="fw-bold">24k View</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline Favorite</p>
                             </div>
                         </div>
                         <button class="bg-transparent border-0 text-warning fs-1">
@@ -343,7 +362,8 @@
                             <img src="assets/img/video/fev.png" class="thumb" alt="Video Thumbnail">
                             <div class="video-details">
                                 <h6>The Video Title is here its a dummy text i used. This title automatically catch from video</h6>
-                                <p><span class="fw-bold">24k View</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline Favorite</p>
+                                <p class="d-md-none"><span class="fw-bold">24k View</span></p>
+                                <p class="d-none d-md-block"><span class="fw-bold">24k View</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline Favorite</p>
                             </div>
                         </div>
                         <button class="bg-transparent border-0 text-warning fs-1">
@@ -357,7 +377,8 @@
                             <img src="assets/img/video/fev.png" class="thumb" alt="Video Thumbnail">
                             <div class="video-details">
                                 <h6>The Video Title is here its a dummy text i used. This title automatically catch from video</h6>
-                                <p><span class="fw-bold">24k View</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline Favorite</p>
+                                <p class="d-md-none"><span class="fw-bold">24k View</span></p>
+                                <p class="d-none d-md-block"><span class="fw-bold">24k View</span>  <span class="mx-4 fs-4">|</span>  Final Review the video for offline Favorite</p>
                             </div>
                         </div>
                         <button class="bg-transparent border-0 text-warning fs-1">
