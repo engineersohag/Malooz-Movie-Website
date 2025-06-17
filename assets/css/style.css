@@ -97,6 +97,12 @@ nav .search-btn input:focus{
 .search-btn:hover {
 	color: #ccc;
 }
+.navbar-custom .navbar-nav .nav-link.active{
+  color: var(--primary) !important;
+}
+.navbar-custom .navbar-nav .nav-link:hover{
+  color: var(--primary) !important;
+}
 
 .profile-btn{
     display: flex;
