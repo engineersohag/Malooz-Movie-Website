@@ -32,6 +32,108 @@
       color: #B8EB00 !important;
     }
   </style>
+  <style>
+    .modal-content {
+        background: #121212 !important;
+        border-radius: 20px;
+        padding: 30px;
+    }
+    
+    .features span {
+      font-size: 13px;
+      margin-right: 15px;
+      color: #bbb;
+    }
+    .plan-card {
+      background: #131517;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: .3s;
+      position: relative;
+    }
+    .plan-card.active {
+      color: #fff;
+    }
+    .plan-card.active .plan-card-header{
+        color: #000;
+    }
+    .plan-card h6 {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .plan-card .price {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      padding: 20px;
+    }
+    .plan-card small, .plan-card del {
+      color: #999;
+    }
+    
+    .plan-card input {
+      display: none;
+    }
+    @media(max-width: 576px) {
+      .plan-card {
+        margin-bottom: 12px;
+      }
+    }
+    .plan-card-header {
+      background: #B8EB00;
+      border-radius: 8px 8px 0 0;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #000;
+    }
+    .price {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 20px 0 10px;
+    }
+    .plan-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #999;
+      padding: 20px;
+    }
+    .radio-indicator {
+      width: 18px;
+      height: 18px;
+      font-size: 12px;
+      background: #484A4B;
+      border-radius: 50%;
+    }
+    .radio-indicator.active {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .plan-card.active .plan-card-header{
+        background: #B8EB00;
+    }
+    .btn{
+        font-size: 14px !important;
+        margin: 5px;
+    }
+    .btn.btn-primary{
+        background: #B8EB00 !important;
+        padding: 10px 35px;
+        border: none;
+        outline: none;
+    }
+    .btn.btn-dark{
+        padding: 13px 35px;
+        border: none;
+        outline: none;
+        background: #2a2a2a !important;
+    }
+    </style>
 </head>
 <body>
 
@@ -112,12 +214,12 @@
             <div class=" show p-3" style="background-color: #121212; border-radius: 13px;">
               <h5 class="text-white px-2 pb-3">Settings</h5>
 
-              <a class="d-flex align-items-center text-white text-decoration-none mb-2 px-3 py-2 rounded active" href="settings.html">
+              <a class="d-flex align-items-center text-white text-decoration-none mb-2 px-3 py-2 rounded" href="settings.html">
                 <i class="fa-regular fa-circle-user me-2"></i>
                 <span>Account Details</span>
               </a>
 
-              <a class="d-flex align-items-center text-white text-decoration-none mb-2 px-3 py-2 rounded" href="subscription.html">
+              <a class="d-flex align-items-center text-white text-decoration-none mb-2 px-3 py-2 rounded active" href="subscription.html">
                 <i class="fa-regular fa-id-card me-2"></i>
                 <span>Subscription Manage</span>
               </a>
@@ -140,68 +242,110 @@
 
           </div>
           <div class="col-lg-9 col-md-8">
-            <div class="profile">
-              <div class="mb-5">
-                <div class="p-4 rounded-4" style="background-color: #1a1a1a; border-radius: 13px;">
-                    <h4 class="text-white mb-1">Account Details</h4>
-                    <p class="text-secondary mb-4">Manage your account details</p>
+            <div class="modal-content">
+              <div class="header p-3">
+                  <h3 class="modal-title">Subscription</h3>
+                  <p class="text-secondary mb-3" style="font-size: 12px;">Manage your Subscription</p>
+              </div>
+              <div class="features mb-4 p-3">
+                  <h5 class="mb-3">Premium:</h5>
+                  <h6 class="mb-3">What does premium include?</h6>
+                  <span>
+                      <i class="fa-solid fa-circle-check text-white fs-6 me-1"></i>
+                      Watch any movie and show.
+                  </span>
+                  <span>
+                      <i class="fa-solid fa-circle-check text-white fs-6 me-1"></i>
+                      Watch full length live sessions.
+                  </span>
+                  <span>
+                      <i class="fa-solid fa-circle-check text-white fs-6 me-1"></i>
+                        Offline download.
+                  </span>
+              </div>
 
-                    <div class="d-flex flex-column flex-md-row align-items-center gap-4 mb-4">
-                        <img src="assets/img/profile/acc-user.png" class="rounded-circle" style="width:140px; height:140px; object-fit:cover;">
-                        <button class="btn btn-dark d-flex align-items-center gap-2 px-4 py-2 rounded-pill">
-                            <i class="fa-solid fa-pen-nib text-primary"></i>
-                            <span class="text-white fw-semibold">Change Picture</span>
-                        </button>
-                    </div>
+              <div class="modal-body">
+                  
+                  <div class="row mt-2">
 
-                    <h6 class="text-white mb-3">Personal Details:</h6>
+                      <!-- Daily -->
+                      <div class="col-lg-6 mb-4">
+                          <div class="plan-card w-100">
+                              <div class="plan-card-header">
+                                  <div><strong>Daily</strong> - Best for daily Entertainment</div>
+                                  <div class="radio-indicator"></div>
+                              </div>
+                              <input type="radio" name="plan" value="daily">
+                              <div class="price">$2.99</div>
+                              <div class="plan-meta">
+                                  <div>per Day</div>
+                                  <div>Cancel anytime</div>
+                              </div>
+                          </div>
+                          <div class="d-flex justify-content-between mt-3">
+                              <button class="btn btn-primary rounded-pill">Change Plan</button>
+                              <button class="btn btn-dark rounded-pill">Cancel Membership</button>
+                          </div>
+                      </div>
 
-                    <form action="">
-                        <div class="row g-3 mb-3">
-                            <div class="col-md-6">
-                                <label class="form-label text-secondary">First Name:</label>
-                                <input type="text" class="form-control text-white border-0" style="background-color: #2a2a2a;" placeholder="Jhone">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label text-secondary">Last Name:</label>
-                                <input type="text" class="form-control text-white border-0" style="background-color: #2a2a2a;" placeholder="Deo">
-                            </div>
-                        </div>
+                      <!-- Weekly -->
+                      <div class="col-lg-6 mb-4">
+                          <div class="plan-card w-100">
+                              <div class="plan-card-header">
+                                  <div><strong>Weekly</strong> - Best for Weekly Entertainment</div>
+                                  <div class="radio-indicator"></div>
+                              </div>
+                              <input type="radio" name="plan" value="daily">
+                              <div class="price">$19.99</div>
+                              <div class="plan-meta">
+                                  <div>per Week</div>
+                                  <div>Cancel anytime</div>
+                              </div>
+                          </div>
+                          <div class="d-flex justify-content-between mt-3">
+                              <button class="btn btn-primary rounded-pill">Change Plan</button>
+                              <button class="btn btn-dark rounded-pill">Cancel Membership</button>
+                          </div>
+                      </div>
 
-                        <div class="row g-3 mb-3">
-                            <div class="col-md-6">
-                                <label class="form-label text-secondary">Email:</label>
-                                <input type="email" class="form-control text-white border-0" style="background-color: #2a2a2a;" placeholder="hello@gmail.com">
-                            </div>
-                            <div class="col-md-6">
-                                <label class="form-label text-secondary">Phone Number:</label>
-                                <div class="input-group">
-                                    <button class="btn btn-dark border-0" type="button">
-                                        <img src="https://flagcdn.com/w40/us.png" style="width:24px;" alt="US">
-                                        <i class="fa-solid fa-chevron-down text-white ms-2"></i>
-                                    </button>
-                                    <input type="text" class="form-control text-white border-0" style="background-color: #2a2a2a;" placeholder="1234 5678 90">
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="mb-4">
-                            <label class="form-label text-secondary">Password:</label>
-                            <div class="input-group">
-                                <input type="password" class="form-control text-white border-0" style="background-color: #2a2a2a;" placeholder="A7&zh%8..">
-                                <button class="btn btn-dark border-0" type="button">
-                                    <i class="fa-solid fa-eye-slash text-white"></i>
-                                </button>
-                            </div>
-                        </div>
+                  </div>
 
-                        <div class="d-flex flex-wrap gap-3">
-                            <button type="button" class="btn btn-primary rounded-pill px-4">Edit</button>
-                            <button type="button" class="btn btn-dark rounded-pill px-4">Cancel Membership</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+
+              </div>
+
+              <h5 class="mb-3">Payment Info:</h5>
+              <div class="card border-0 py-2 px-4 d-flex justify-content-between flex-lg-row" style="background: #1A1A1A; border-radius: 13px;">
+                  <div class="d-flex gap-2">
+                      <div class=""><i class="bi bi-credit-card-fill fs-1"></i></div>
+                      <div>
+                          <small class="text-muted">Next Payment:</small>
+                          <p>November 26, 2024</p>
+                      </div>
+                  </div>
+                  <div>
+                      <div>
+                          <small class="text-muted">Payment Method:</small>
+                          <p>Visa  **** **** **** 7031</p>
+                      </div>
+                  </div>
+                  <div>
+                      <div>
+                          <small class="text-muted">Amount to Pay:</small>
+                          <p>$19.99 - November</p>
+                      </div>
+                  </div>
+                  <div>
+                      <button class="btn btn-dark rounded-pill">View Current Bill</button>
+                      <button class="btn btn-primary rounded-pill">Pay Now</button>
+                  </div>
+              </div>
+
+              <div class="mt-4 text-center text-lg-start">
+                  <button class="btn btn-primary py-3 rounded-pill">Manage payment method</button>
+                  <button class="btn btn-primary py-3 rounded-pill">View payment history</button>
+                  <button class="btn btn-dark py-3 rounded-pill">Redeem Promo Code</button>
+              </div>
             </div>
           </div>
         </div>
