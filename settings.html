@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Malooz</title>
+	<link rel="icon" href="assets/img/fav.png">
+
+	<!-- fontawesome CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+	<!-- -- Bootstrap 5 -- -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- -- Custom CSS -- -->
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-custom px-3 py-2">
+	  <div class="container-xl py-lg-2">
+	    <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
+	      <img src="assets/img/logo.png" alt="" style="width: 140px;">
+	    </a>
+	    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+	      <i class="fa-solid fa-bars"></i>
+	    </button>
+
+	    <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+	      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 bg-black rounded-pill px-3 py-1">
+	        <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="movie-serice.html">Movies & Series</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="live.html">Live</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="event.html">Events</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="sports.html">Sports</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="new-popular.html">New & Popular</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="documentaries.html">Documentaries</a></li>
+	      </ul>
+	      <!-- Right Side -->
+            <div class="d-flex align-items-center justify-content-center flex-lg-row flex-column">
+                <div class="search-btn me-2">
+                    <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <input type="searcch" placeholder="search" class="form-control d-lg-none">
+                </div>
+                <div class="profile-btn mt-3 mt-lg-0">
+                    <img src="assets/img/profile/top-user.png" alt="">
+                    <h6 class="mt-1">Jimmy</h6>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" id="dropdownFilter" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis-vertical text-white fs-5"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter">
+
+                            <!-- Item 1 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="profile.html">Account</a>
+                            </li>
+
+                            <!-- Item 2 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="javascript:void(0)">Settings</a>
+                                <ul class="dropdown-menu">
+                                    <h5 class="text-white px-4 py-2">Settings</h5>
+
+                                    <li>
+                                        <a class="dropdown-item" href="profile.html">
+                                            <i class="bi bi-person-circle me-2"></i> <span>Account Details</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="subscription.html">
+                                            <i class="bi bi-person-vcard-fill me-2"></i><span>Subscription</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="payment-billing.html">
+                                            <i class="bi bi-credit-card-fill me-2"></i><span>Payment</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="device.html">
+                                            <i class="bi bi-pc-display me-2"></i><span>Devices</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bi bi-keyboard-fill me-2"></i><span>Change PIN</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="prefarance.html">
+                                            <i class="bi bi-gear me-2"></i><span>Preferences</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bi bi-box-arrow-right me-2 text-danger"></i><span>Logout</span>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+
+                            <!-- Item 3 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="contact.html">Contact Us</a>
+                            </li>
+
+                            <!-- Item 4 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Favorites</a>
+                            </li>
+
+                            <!-- Item 5 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+	    </div>
+	  </div>
+	</nav>
+	<!-- -- Nav End -- -->
+
+    <!-- -- main content -- -->
+    <main class="settings my-5">
+      <div class="container-fluid px-lg-4">
+        <div class="row">
+          <div class="col-md-3">
+            <div class=" show p-3" style="background-color: #121212; border-radius: 16px; width: 260px;">
+              <h5 class="text-white px-2 pb-3">Settings</h5>
+
+              <a class="d-flex align-items-center text-white text-decoration-none mb-2 px-3 py-2 rounded bg-dark" href="settings.html">
+                <i class="fa-regular fa-circle-user me-2"></i>
+                <span>Account Details</span>
+              </a>
+
+              <a class="d-flex align-items-center text-white text-decoration-none mb-2 px-3 py-2 rounded" href="subscription.html">
+                <i class="fa-regular fa-id-card me-2"></i>
+                <span>Subscription Manage</span>
+              </a>
+
+              <a class="d-flex align-items-center text-white text-decoration-none mb-2 px-3 py-2 rounded" href="payment-billing.html">
+                <i class="fa-solid fa-credit-card me-2"></i>
+                <span>Payment manage</span>
+              </a>
+
+              <a class="d-flex align-items-center text-white text-decoration-none mb-2 px-3 py-2 rounded" href="prefarance.html">
+                <i class="fa-solid fa-gear me-2"></i>
+                <span>Preferences</span>
+              </a>
+
+              <a class="d-flex align-items-center text-white text-decoration-none mt-2 px-3 py-2 rounded" href="#">
+                <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+   
+	<!-- footer part start  -->
+	<footer class="bg-black text-white pt-5 pb-4">
+	  <div class="container">
+	    <div class="row gy-4">
+	      <!-- Home -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Home</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Categories</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Devices</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Pricing</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">FAQ</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Movies -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Movies</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Gernes</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Trending</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">New Release</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Popular</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Series -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Series</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Gernes</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Trending</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">New Release</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Popular</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Support -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Support</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Contact Us</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Subscription -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Subscription</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Plans</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Features</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Social -->
+	      <div class="col-12 col-md-2">
+	        <h6 class="fw-bold">Connect With Us</h6>
+	        <div class="d-flex gap-2">
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-facebook"></i>
+	          </a>
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-twitter"></i>
+	          </a>
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-linkedin"></i>
+	          </a>
+	        </div>
+	      </div>
+	    </div>
+
+	    <hr class="border-secondary mt-4">
+
+	    <div class="row text-muted small pt-2">
+	      <div class="col-md-6 text-center text-md-start">
+	        &copy;2025 Malooz, All Rights Reserved
+	      </div>
+	      <div class="col-md-6 text-center text-md-end">
+	        <a href="#" class="text-decoration-none text-muted me-3">Terms of Use</a>
+	        <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+	        <a href="#" class="text-decoration-none text-muted">Cookie Policy</a>
+	      </div>
+	    </div>
+	  </div>
+	</footer>
+
+
+    <!-- JS Scripts -->
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+    // Plan selection highlight
+    const planCards = document.querySelectorAll('.plan-card');
+    // const aciveIcon = document.querySelector('.radio-indicator');
+    planCards.forEach(card => {
+        card.addEventListener('click', () => {
+            planCards.forEach(c => c.classList.remove('active'));
+            card.classList.add('active');
+
+            // Remove active class from all plan-cards and their radio-indicators
+            planCards.forEach(c => {
+                c.classList.remove('active');
+                const icon = c.querySelector('.radio-indicator');
+                if (icon){
+                    icon.classList.remove('active'); // null check
+                    icon.innerHTML = ''; // Remove icon if exists
+                } 
+            });
+
+            // Add active class to clicked plan-card and its radio-indicator
+            card.classList.add('active');
+            const selectedIcon = card.querySelector('.radio-indicator');
+            if (selectedIcon){
+                selectedIcon.classList.add('active');
+                selectedIcon.innerHTML = '<i class="fa-solid fa-check text-dark"></i>';
+            } 
+
+            // Check the input if exists
+            const input = card.querySelector('input');
+            if (input) input.checked = true;
+
+
+        });
+    });
+    </script>
+</body>
+</html>
