@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Malooz</title>
+	<link rel="icon" href="assets/img/fav.png">
+
+	<!-- fontawesome CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+	<!-- -- Bootstrap 5 -- -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- -- Custom CSS -- -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	<style>
+		.programme .title h2{
+			font-size: 32px;
+			font-weight: 700;
+		}
+		.programme .title p{
+			font-size: 20px;
+			font-weight: 400;
+		}
+		.work-section {
+			padding: 30px;
+			border-radius: 8px;
+		}
+		.step-label {
+			background-color: #B8EB00;
+			color: #fff;
+			font-weight: 600;
+			padding: 5px 20px;
+			border-radius: 0 25px 0 0;
+			display: inline-block;
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+		.work-icon {
+			font-size: 28px;
+			margin-bottom: 16px;
+			color: #fff;
+			text-align: end;
+		}
+		.work-text {
+			font-size: 14px;
+			line-height: 22px;
+			margin-bottom: 0px !important;
+		}
+		.faq-item {
+			margin-bottom: 30px;
+		}
+		.faq-icon {
+			margin-right: 10px;
+			margin-top: 3px;
+		}
+		.faq-icon i{
+			border: 2px solid #B8EB00;
+			padding: 3px 6px;
+			border-radius: 50%;
+			font-size: 14px;
+		}
+		.faq-question {
+			font-size: 20px;
+			font-weight: 400;
+			margin-bottom: 10px;
+		}
+		.faq-answer {
+			font-size: 18px;
+			line-height: 1.6;
+		}
+        form input::placeholder{
+            text-align: center;
+        }
+        form input[type="text"]{
+            background-color: #000 !important;
+            border: none;
+        }
+        form input[type="text"]:focus{
+            border: none;
+            box-shadow: none;
+        }
+
+	</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom px-3 py-2">
+	  <div class="container-xl py-lg-2">
+	    <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
+	      <img src="assets/img/logo.png" alt="" style="width: 140px;">
+	    </a>
+	    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+	      <i class="fa-solid fa-bars"></i>
+	    </button>
+
+	    <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+	      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 bg-black rounded-pill px-3 py-1">
+	        <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="movie-serice.html">Movies & Series</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="live.html">Live</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="event.html">Events</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="sports.html">Sports</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="new-popular.html">New & Popular</a></li>
+	        <li class="nav-item"><a class="nav-link px-3" href="documentaries.html">Documentaries</a></li>
+	      </ul>
+	      <!-- Right Side -->
+            <div class="d-flex align-items-center justify-content-center flex-lg-row flex-column">
+                <div class="search-btn me-2">
+                    <a href="javascript:void(0)"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <input type="searcch" placeholder="search" class="form-control d-lg-none">
+                </div>
+                <div class="profile-btn mt-3 mt-lg-0">
+                    <img src="assets/img/profile/top-user.png" alt="">
+                    <h6 class="mt-1">Jimmy</h6>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" id="dropdownFilter" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-ellipsis-vertical text-white fs-5"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownFilter">
+
+                            <!-- Item 1 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="settings.html">Account</a>
+                            </li>
+
+                            <!-- Item 2 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="settings.html">Settings</a>
+                            </li>
+
+                            <!-- Item 3 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="contact.html">Contact Us</a>
+                            </li>
+
+                            <!-- Item 4 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Favorites</a>
+                            </li>
+
+                            <!-- Item 5 -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+	    </div>
+	  </div>
+    </nav>
+	<!-- -- Nav End -- -->
+
+    <!-- -- main content -- -->
+    <main class="py-5 programme" style="background-color: #1C1C1C;">
+		<!-- title part  -->
+		<div class="container">
+			<div class="title my-3 text-center">
+				<h2>Referral Programme</h2>
+				<p>Harness the affiliate marketing for Malooz campaigns. <br> Allow backers to collect their own affiliate links to help you boost the sales.</p>
+			</div>
+		</div>
+
+		<!-- header card  -->
+		<div class="container header-card rounded p-3 my-4" style="background-color: #000;">
+
+			<h4 class="text-center pt-3 mb-4">How Dose It Work ?</h4>
+ 
+			<div class="row g-3">
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="work-section">
+						<div class="step-label">STEP 1</div>
+						<div class="work-icon">
+							<i class="fas fa-link"></i>
+						</div>
+						<p class="work-text">Please Copy The Referral Url And Start Earning.</p>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="work-section">
+						<div class="step-label">STEP 2</div>
+						<div class="work-icon">
+							<i class="fas fa-share-alt"></i>
+						</div>
+						<p class="work-text">Share The Referral Link With Friends Via Email Or Social Media.</p>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="work-section">
+						<div class="step-label">STEP 3</div>
+						<div class="work-icon">
+							<i class="fas fa-award"></i>
+						</div>
+						<p class="work-text">When Your Friends Click On Your Link And Pledge. Your Referral Link Will Be Listed.</p>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="work-section">
+						<div class="step-label">STEP 4</div>
+						<div class="work-icon">
+							<i class="fas fa-gift"></i>
+						</div>
+						<p class="work-text">We Will Notify You To Redeem Your Prize. When Campaign Ended If You Are Eligible.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container my-5">
+			<div class="row">
+				<div class="col-lg-7 mb-lg-0 mb-3">
+					<div class="faq-item d-flex">
+						<div class="faq-icon">
+							<i class="fa-solid fa-question"></i>
+						</div>
+						<div>
+							<div class="faq-question">Who Can Participate In This Campaign Referral Program?</div>
+							<div class="faq-answer text-secondary">Create Your Referral Link After You Backed Kickstarter Campaign. This Program Is Open To All Kickstarter Backers Of This Campaign.</div>
+						</div>
+					</div>
+					<div class="faq-item d-flex">
+						<div class="faq-icon">
+							<i class="fa-solid fa-question"></i>
+						</div>
+						<div>
+							<div class="faq-question">I’ve Invited My Friends, And They Ve Pledged This Campaign. Why Don’t See My Referrals?</div>
+							<div class="faq-answer text-secondary">Our Referral Leaderboard Will Be Updated Every Hour, So Be Sure To Check<br>Back In With Us For The Latest Update.</div>
+						</div>
+					</div>
+					<div class="faq-item d-flex">
+						<div class="faq-icon">
+							<i class="fa-solid fa-question"></i>
+						</div>
+						<div>
+							<div class="faq-question">I’ve Invited My Friends, And They Ve Pledged This Campaign. Why Don’t See My Referrals?</div>
+							<div class="faq-answer text-secondary">Our Referral Leaderboard Will Be Updated Every Hour, So Be Sure To Check<br>Back In With Us For The Latest Update.</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-lg-4 d-flex align-items-end text-center">
+					<div class="w-100">
+						<p>Your referral invited link is here</p>
+						<form action="">
+                            <input type="text" placeholder="www.malooz.com/Your referral invited link" class="form-control">
+                            <input type="submit" value="Copy Link" class="btn btn-primary form-control mt-3 text-white fw-bold">
+                        </form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+    </main>
+
+    
+	<!-- footer part start  -->
+	<footer class="bg-black text-white pt-5 pb-4">
+	  <div class="container">
+	    <div class="row gy-4">
+	      <!-- Home -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Home</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Categories</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Devices</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Pricing</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">FAQ</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Movies -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Movies</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Gernes</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Trending</a></li>
+	          <li><a href="new-popular.html" class="text-decoration-none text-muted">New Release</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Popular</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Series -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Series</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="#" class="text-decoration-none text-muted">Gernes</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Trending</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">New Release</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Popular</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Support -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Support</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="contact.html" class="text-decoration-none text-muted">Contact Us</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Subscription -->
+	      <div class="col-6 col-md-2">
+	        <h6 class="fw-bold">Subscription</h6>
+	        <ul class="list-unstyled small text-muted">
+	          <li><a href="payment.html" class="text-decoration-none text-muted">Plans</a></li>
+	          <li><a href="#" class="text-decoration-none text-muted">Features</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Social -->
+	      <div class="col-12 col-md-2">
+	        <h6 class="fw-bold">Connect With Us</h6>
+	        <div class="d-flex gap-2">
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-facebook"></i>
+	          </a>
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-twitter"></i>
+	          </a>
+	          <a href="#" class="btn btn-outline-light rounded-3 px-2 py-1">
+	            <i class="fa-brands fa-linkedin"></i>
+	          </a>
+	        </div>
+	      </div>
+	    </div>
+
+	    <hr class="border-secondary mt-4">
+
+	    <div class="row text-muted small pt-2">
+	      <div class="col-md-6 text-center text-md-start">
+	        &copy;2025 Malooz, All Rights Reserved
+	      </div>
+	      <div class="col-md-6 text-center text-md-end">
+	        <a href="trams-condition.html" class="text-decoration-none text-muted me-3">Terms of Use</a>
+	        <a href="#" class="text-decoration-none text-muted me-3">Privacy Policy</a>
+	        <a href="#" class="text-decoration-none text-muted">Cookie Policy</a>
+	      </div>
+	    </div>
+	  </div>
+	</footer>
+
+    <!-- JS Scripts -->
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+</html>
