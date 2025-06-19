@@ -773,6 +773,9 @@ input[type="range"].progress::-webkit-slider-thumb {
   .movice-serics .hero-section{
     height: 400px;
   }
+  .custom-table th{
+		font-size: 14px;
+	}
 }
 
 
@@ -811,4 +814,7 @@ input[type="range"].progress::-webkit-slider-thumb {
     align-items: end;
     padding-bottom: 50px;
   }
+  .custom-table th{
+		font-size: 14px !important;
+	}
 }
